@@ -88,3 +88,23 @@ Vector Vector::operator- (int a)
 	}
 	return rez;
 }
+
+Vector& Vector::operator++()
+{
+	return *this;
+}
+
+Vector& Vector::operator++(int)
+{
+	// TODO: insert return statement here
+}
+
+Vector& Vector::operator--()
+{
+	return *this;
+}
+
+Vector& Vector::operator--(int)
+{
+	// TODO: insert return statement here
+}

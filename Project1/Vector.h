@@ -18,4 +18,9 @@ public:
 
 	/// перегрузки операции
 	Vector operator-(int a);
+
+	Vector& operator++();
+	Vector& operator++(int);
+	Vector& operator--();
+	Vector& operator--(int);
 };
