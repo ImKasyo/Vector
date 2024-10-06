@@ -11,7 +11,11 @@ Vector::Vector()
 Vector::Vector(int s)
 {
 	size = s;
-	arr = new int[size] {0};
+	arr = new int[size];
+	for (int i = 0; i < size; i++) {
+		arr[i] = i + 1;
+	}
+
 }
 Vector::~Vector()
 {
@@ -91,12 +95,15 @@ Vector Vector::operator- (int a)
 
 Vector& Vector::operator++()
 {
+	for (int i = 0; i < size; i++) {
+		arr[i] += 1;
+	}
 	return *this;
 }
 
 Vector& Vector::operator++(int)
 {
-	// TODO: insert return statement here
+	Vector temp
 }
 
 Vector& Vector::operator--()
