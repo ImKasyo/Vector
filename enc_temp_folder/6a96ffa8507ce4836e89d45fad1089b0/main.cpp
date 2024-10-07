@@ -21,8 +21,8 @@ int main()
 
 	Vector obj1(5);
 	obj1.Print();
-	//Vector obj4 = obj1++;
-	//obj4.Print(); Œÿ»¡ ¿
+	Vector obj4 = obj1++;
+	obj4.Print();
 	Vector obj5 = ++obj1;
 	obj5.Print();
 
