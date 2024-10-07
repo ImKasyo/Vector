@@ -10,7 +10,7 @@
 	}
 	Vector::Vector(int s)
 	{
-		cout << "Constructor by 1 params";
+		cout << "Constructor by 1 params" << endl;
 		size = s;
 		arr = new int[size];
 		for (int i = 0; i < size; i++) {
