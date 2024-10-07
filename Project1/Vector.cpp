@@ -1,4 +1,4 @@
-	#include "Vector.h"
+		#include "Vector.h"
 	#include<iostream>
 	#include<Windows.h>
 	using namespace std;
@@ -109,18 +109,17 @@
 
 	Vector& Vector::operator++(int)
 	{
-		Vector temp(size);
-		int* newArr = new int[size + 1];
-
+		int* newArr = new int[size + 1];  
 		for (int i = 0; i < size; i++) {
-			newArr[i] = arr[i];
+			newArr[i] = arr[i];  
 		}
-		newArr[size] = 0;
-		delete[] arr;
-		arr = newArr;
-		size++; 
+		newArr[size] = 0; 
 
-		return temp;
+		delete[] arr;  
+		arr = newArr; 
+		size++;  
+
+		return *this; 
 	}
 
 	//Vector& Vector::operator--()
