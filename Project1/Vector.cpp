@@ -109,23 +109,29 @@
 
 	Vector& Vector::operator++(int)
 	{
-		int* newArr = new int[size + 1];  
-		for (int i = 0; i < size; i++) {
-			newArr[i] = arr[i];  
+		Vector temp(size + 1);
+		for (int i = 0; i < size + 1; i++) {
+			temp.arr[i] = arr[i];
 		}
-		newArr[size] = 0; 
+		temp.arr[size] = 0;
+		delete arr;
+		arr = temp.arr;
+		size++;
+		return temp;
 
-		delete[] arr;  
-		arr = newArr; 
-		size++;  
-
-		return *this; 
 	}
 
-	//Vector& Vector::operator--()
-	//{
-	//	return *this;
-	//}
+	Vector& Vector::operator--()
+	{
+		int* temp = new int[size - 1];
+		for (int i = 0; i < size - 1; i++) {
+			temp[i] = arr[i];
+		}
+		delete[] arr;
+		arr = temp;
+		size--;
+		return *this;
+	}
 
 	//Vector& Vector::operator--(int)
 	//{

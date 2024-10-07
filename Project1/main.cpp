@@ -23,9 +23,12 @@ int main()
 	obj1.Print();
 	Vector obj4 = obj1++;
 	obj4.Print();
+	Vector obj5 = ++obj1;
+	obj5.Print();
 
-	//не добавляет в конец массива элемент
-
+	Vector obj7 = --obj1;
+	obj7.Print();
+	
 
 
 	
