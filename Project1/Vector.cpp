@@ -111,12 +111,13 @@
 	{
 		Vector temp(size + 1);
 		Vector v = *this;
-		for (int i = 0; i < size + 1; i++) {
+		for (int i = 0; i < size; i++) {
 			temp.arr[i] = arr[i];
 		}
 		temp.arr[size] = 0;
 		delete[] arr;
 		arr = temp.arr;
+		temp.arr = nullptr;
 		size++;
 		return v;
 
