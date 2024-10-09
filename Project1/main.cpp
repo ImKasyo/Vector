@@ -22,12 +22,13 @@ int main()
 	Vector obj1(5);
 	obj1.Print();
 	//Vector obj4 = obj1++;
-	//obj4.Print(); //ОШИБКА
-	Vector obj5 = ++obj1;
-	obj5.Print();
+	//obj4.Print(); 
+	//obj1.Print();
+	//Vector obj5 = ++obj1;
+	//obj5.Print();
 
-	Vector obj7 = --obj1;
-	obj7.Print();
+	//Vector obj7 = --obj1;
+	//obj7.Print();
 	
 
 

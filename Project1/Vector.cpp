@@ -110,14 +110,15 @@
 	Vector& Vector::operator++(int)
 	{
 		Vector temp(size + 1);
+		Vector v = *this;
 		for (int i = 0; i < size + 1; i++) {
 			temp.arr[i] = arr[i];
 		}
 		temp.arr[size] = 0;
-		delete arr;
+		delete[] arr;
 		arr = temp.arr;
 		size++;
-		return temp;
+		return v;
 
 	}
 
