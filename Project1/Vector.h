@@ -23,4 +23,6 @@ public:
 	Vector& operator++(int);
 	Vector& operator--();
 	Vector& operator--(int);
+
+	Vector& operator =(const Vector& obj);
 };
