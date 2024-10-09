@@ -109,16 +109,17 @@
 
 	Vector& Vector::operator++(int)
 	{
-		Vector temp(size + 1);
-		Vector v = *this;
+		int* tarr = new int[size + 1];
+
+		Vector v(*this);
 		for (int i = 0; i < size; i++) {
-			temp.arr[i] = arr[i];
+			tarr[i] = arr[i];
 		}
-		temp.arr[size] = 0;
+		tarr[size] = 0;
 		delete[] arr;
-		arr = temp.arr;
-		temp.arr = nullptr;
+		arr = tarr;
 		size++;
+
 		return v;
 
 	}
