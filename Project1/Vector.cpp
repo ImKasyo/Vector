@@ -124,6 +124,21 @@
 
 	}
 
+	Vector& Vector::operator--(int)
+	{
+		int* tarr = new int[size - 1];
+		Vector v(*this);
+		for (int i = 0; i < size; i++) {
+			tarr[i] = arr[i];
+		}
+		delete[] arr;
+		arr = tarr;
+		size--;
+		return v;
+	
+	}
+
+
 	Vector& Vector::operator--()
 	{
 		int* temp = new int[size - 1];
@@ -152,8 +167,3 @@
 		return *this;
 
 	}
-
-	//Vector& Vector::operator--(int)
-	//{
-	//	// TODO: insert return statement here
-	//}
