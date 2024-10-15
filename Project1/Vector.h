@@ -25,4 +25,5 @@ public:
 	Vector& operator--(int);
 
 	Vector& operator =(const Vector& obj);
+	Vector& operator *= (int a);
 };

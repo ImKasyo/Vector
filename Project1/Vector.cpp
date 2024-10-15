@@ -167,3 +167,17 @@
 		return *this;
 
 	}
+
+	Vector& Vector::operator*=(int a)
+	{
+		int* temp = new int[size];
+		for (int i = 0; i < size; i++) {
+			temp[i] = arr[i];
+			temp[i] = temp[i] * a;
+		}
+		delete[] arr;
+		arr = temp;
+		return *this;
+	}
+
+
